@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: rgb(77, 179, 179);
+  --second-bg: rgb(79, 129, 122);
+  --input-bg: rgb(233, 237, 200);
+  --input-hover-bg: rgb(190, 212, 167);
+  --submit-bg: rgb(66, 200, 156);
+  --submit-hover-bg: rgb(182, 236, 169);
+  --main-border: rgb(155, 225, 225);
+  --shadow: rgb(28, 60, 40);
+  --shadow-active: rgb(15, 68, 63);
+  --error: rgb(11, 28, 14);
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: var(--main-bg);
+}
+
+.container {
+  width: 100%;
+  padding: 7rem;
+}
+
+#form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 5rem;
+  max-width: 45rem;
+  border: 3px solid var(--main-border);
+  border-radius: 20px;
+  background-color: var(--second-bg);
+  color: var(--input-bg);
+  font-size: 1.7rem;
+  box-shadow: 0px 0px 10px 4px var(--shadow);
+}
+
+.label {
+  margin-bottom: -10px;
+}
+
+.input__field {
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  background-color: var(--input-bg);
+  border-radius: 10px;
+  border: 3px solid var(--main-border);
+
+  &:hover {
+    background-color: var(--input-hover-bg);
+    transition: .3s;
+  }
+}
+
+.submit {
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  max-width: fit-content;
+  border: 3px solid var(--main-border);
+  border-radius: 10px;
+  background-color: var(--submit-bg);
+  cursor: pointer;
+  color: rgb(43, 44, 34);
+
+  &:hover {
+    background-color: var(--submit-hover-bg);
+    transition: .3s;
+  }
+
+  &:active {
+        margin-left: 1px 1px 0;
+        box-shadow: 0 0 25px 3px var(--shadow-active);
+        -moz-outline-radius: 7px;
+        background-image: linear-gradient(to top, #97e8ae, #3be36b);
+        transition: .3s ease-out;
+  }
+}
+
+.input__error {
+  color: var(--error);
+  font-size: 1.4rem;
+  margin-bottom: -25px;
+}
